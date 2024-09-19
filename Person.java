@@ -12,7 +12,7 @@ public class Person {
     }
 // tujuan buat method ni kalau banyak dataa so kita nak organised it
     public void displayDetails(){
-    
+     // void means finish 
        int maxInt = Integer.MAX_VALUE;
        long maxPLusOne = 62328399220101010L; 
        boolean condition = false;
@@ -25,7 +25,7 @@ public class Person {
 
     }
 
-    public static void main(String[]args){
+    public static void main(String[]args){  // static means kena ada value dalam dia, dia adalah the real data. controller outside api  so dia akan hntr ke luar//spring boot
         Person person = new Person("Atok", 17);  // kita kena declare dalam paranthesis sbb kat atas tak declare
         person.displayDetails();}
 }
