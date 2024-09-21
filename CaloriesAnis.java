@@ -36,3 +36,11 @@ public class CaloriesAnis {
             System.out.println(dayName);
     
         } }}
+
+
+        //first kau kena tahu apa variable dia guna, increament, days, calory
+        // anis punya dia declare setiap 
+
+
+        //apa yang aku belajar dari mistake harini
+        //dalam for d++ maksud tambah 1, nak tambha 100 d+100 akan jadi salah so kena d++100 atau d=+100 atau d=d+100

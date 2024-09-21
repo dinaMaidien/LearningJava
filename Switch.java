@@ -9,13 +9,9 @@ public class Switch {
 
             case 1 : 
                 dayName = "MOnday";
-                
-    
                 break;
              case 2 : 
                 dayName = "Tuesday";
-                
-
                 break;   
              case 3 : 
                 dayName = "Wednesday";
