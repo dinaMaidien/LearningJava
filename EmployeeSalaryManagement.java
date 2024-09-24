@@ -69,7 +69,12 @@ public class EmployeeSalaryManagement{
 
         return bonus;
     }
+    public void displayEmployeeOutput() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Bonus: " + bonus);
 
+        System.out.println();
+    }
     public static void main (String[]args){
     EmployeeSalaryManagement[]emp=new EmployeeSalaryManagement[5];
 
@@ -79,9 +84,10 @@ public class EmployeeSalaryManagement{
     emp[3]=new EmployeeSalaryManagement("Dian", 17000,150,200,100);
     emp[4]=new EmployeeSalaryManagement("Diana", 9000,500,200,100);
 
-     for (int i = 0; i<emp.length; i++){
-        System.out.println("\nEmployee: " + emp[i].getName() + "\nTotalSalary: " + emp[i].TotalSalary() + "\nBonus: " + emp[i].assignBonus());
-      }  
+
+    for (EmployeeSalaryManagement e: emp){
+        e.displayEmployeeOutput();
+    }
 
     }
 }
