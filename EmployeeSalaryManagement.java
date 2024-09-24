@@ -8,12 +8,12 @@ public class EmployeeSalaryManagement{
 
 
     //consturctor
-    public EmployeeSalaryManagement(String name, double baseSalary, double transportAllowance, double healthAllowance, double bonus){
+    public EmployeeSalaryManagement(String name, double baseSalary, double transportAllowance, double healthAllowance){
          this.name=name;
          this.baseSalary=baseSalary;
-         healthAllowance=0;
-         transportAllowance=0;
-         bonus=0;
+         this.healthAllowance=healthAllowance;
+         this.transportAllowance=transportAllowance;
+         this.bonus=0;
     }
 
     public void setName(String name){    //setter for name
@@ -48,7 +48,7 @@ public class EmployeeSalaryManagement{
     
     public double TotalSalary(){
   
-        totalSalary = (baseSalary+healthAllowance+transportAllowance+bonus);
+        totalSalary = (baseSalary+healthAllowance+transportAllowance+assignBonus());
         return totalSalary;
         }
     
@@ -69,25 +69,28 @@ public class EmployeeSalaryManagement{
 
         return bonus;
     }
+    public void displayEmployeeOutput() {
+        System.out.println("Employee Name: " + name);
+        System.out.println("Bonus: " + assignBonus());
+        System.out.println("Health Allowance: " + healthAllowance);
+        System.out.println("Transport Allowance: " + transportAllowance);
+        System.out.println("Total: " + TotalSalary());
 
+        System.out.println();
+    }
     public static void main (String[]args){
     EmployeeSalaryManagement[]emp=new EmployeeSalaryManagement[5];
 
-    emp[0]=new EmployeeSalaryManagement("Dina", 8000,100,150, 100);
-    emp[1]=new EmployeeSalaryManagement("Diya", 1500, 150,200, 150);
-    emp[2]=new EmployeeSalaryManagement("Dinie", 9000,150,200,100);
-    emp[3]=new EmployeeSalaryManagement("Dian", 17000,150,200,100);
-    emp[4]=new EmployeeSalaryManagement("Diana", 9000,500,200,100);
+    emp[0]=new EmployeeSalaryManagement("Dina", 80000,100,150);
+    emp[1]=new EmployeeSalaryManagement("Diya", 10500, 150,200);
+    emp[2]=new EmployeeSalaryManagement("Dinie", 90000,150,200);
+    emp[3]=new EmployeeSalaryManagement("Dian", 170000,150,200);
+    emp[4]=new EmployeeSalaryManagement("Diana", 90000,500,200);
 
-     for (int i = 0; i<emp.length; i++){
-        System.out.println("\nEmployee: " + emp[i].getName() + "\nTotalSalary: " + emp[i].TotalSalary() + "\nBonus: " + emp[i].assignBonus());
-      }  
+
+    for (EmployeeSalaryManagement e: emp){
+        e.displayEmployeeOutput();
+    }
 
     }
 }
-
-  
-
-
-
-
