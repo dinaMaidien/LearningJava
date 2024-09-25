@@ -90,21 +90,20 @@ public class tryCatchFinally {
      
                 System.out.println(emp[7]);
             }catch (ArrayIndexOutOfBoundsException e){
-                System.out.println("caugt bad" + e.getMessage());
+                System.out.println("caugt bad " + e.getMessage());
             }finally{
                 System.out.println("It will executes anyway");
             }
     
             System.out.println("Programm is continue");
-            
-            //for (EmployeeSalaryManagement e: emp){
-             //   e.displayEmployeeOutput();
+          //for (tryCatchFinally e: emp){
+            //    e.displayEmployeeOutput();
+
+            //display uutput
         
             }
        
         }
-       
-    
     
     
 

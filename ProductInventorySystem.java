@@ -20,8 +20,8 @@ public class ProductInventorySystem {
         this.price = price;
     }
 
-    public int getPrice(){
-        return price;
-
+  //  public int getPrice(){
+     //   return price;
+//
     }
-}
+//}
